@@ -1,0 +1,38 @@
+-- Database: usuario
+
+-- DROP DATABASE usuario;
+
+CREATE DATABASE usuario
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Costa Rica.1252'
+    LC_CTYPE = 'Spanish_Costa Rica.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+
+
+
+
+
+-- Table: public.usuarios
+
+-- DROP TABLE public.usuarios;
+
+CREATE TABLE public.usuarios
+(
+    cedula integer NOT NULL,
+    nombre character varying(50) COLLATE pg_catalog."default",
+    edad integer,
+    sexo boolean,
+    CONSTRAINT usuarios_pkey PRIMARY KEY (cedula)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.usuarios
+    OWNER to postgres;
