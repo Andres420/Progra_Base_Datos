@@ -175,6 +175,7 @@ public class Agregar_Persona extends javax.swing.JDialog {
             boolean agregado =crub_bd.Agregar_Persona(txtCedula.getText(),txtNombre.getText(),txtEdad.getText(),genero);
             if(agregado){
                 JOptionPane.showMessageDialog(null, "Se ha agregado la persona");
+                this.dispose();
             }
         }else{
             JOptionPane.showMessageDialog(null, "Falta informacion");
